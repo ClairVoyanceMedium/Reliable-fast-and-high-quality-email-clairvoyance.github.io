@@ -1,42 +1,34 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# Robots.txt optimisé pour https://clairvoyancemedium.github.io/Reliable-fast-and-high-quality-email-clairvoyance.github.io/
+# Généré le : 2025-01-08
+# Ce fichier contrôle l'accès des moteurs de recherche à votre site.
+
 User-agent: *
-Disallow: /admin/
-Disallow: /tmp/
+# Permet l'indexation des pages principales
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /pricing
+Allow: /faq
+
+# Bloque l'accès aux répertoires sensibles ou non pertinents pour l'indexation
 Disallow: /private/
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /temp/
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
+# Bloque les fichiers inutiles pour les moteurs de recherche
+Disallow: /*.php$
+Disallow: /*.xml$
+Disallow: /*.json$
+Disallow: /*.txt$
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /wp-login.php
+Disallow: /wp-admin/
 
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
+# Empêche l'indexation des paramètres d'URL
+Disallow: /*?*
+Disallow: /*&*
 
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
-User-agent: Googlebot
-Allow: /
-User-agent: AdsBot-Google
-Allow: /
-User-agent: Bingbot
-Allow: /
-
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
-Disallow: /
-User-agent: EvilScraper
-Disallow: /
-
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+# Déclare l'emplacement du sitemap
+Sitemap: https://clairvoyancemedium.github.io/Reliable-fast-and-high-quality-email-clairvoyance.github.io/sitemap.xml
